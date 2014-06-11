@@ -3,6 +3,20 @@
 
 Files and resources for my AngularJS workshop at the 2014 AIM Faculty Academy.
 
+####Quick Links
+
+This is the Infotec web application we'll be using as a reference for our web application:
+https://event.crowdcompass.com/infotec/multi-level-list/ScheduleByTrack/1
+
+- Slides: https://slides.com/dtauer/fa2014-angularjs
+
+####Tools
+- Notepad++ (windows) http://notepad-plus-plus.org/
+- TextWrangler (mac) http://www.barebones.com/products/textwrangler/
+- XAMPP (windows) https://www.apachefriends.org/index.html
+- MAMP (mac) http://www.mamp.info/en/
+- Twitter Bootstrap: http://getbootstrap.com/
+
 ####Resources
 - Angular Project Site: https://angularjs.org/
 - Free Angular Course: http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
