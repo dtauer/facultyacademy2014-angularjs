@@ -24,5 +24,7 @@ https://event.crowdcompass.com/infotec/multi-level-list/ScheduleByTrack/1
 - Angular YouTube Channel: https://www.youtube.com/user/angularjs/
 - Egghead.io Angular Videos: https://egghead.io/
 - Massive list of addtional resources: https://github.com/jmcunningham/AngularJS-Learning
+- Angular & SEO: http://www.ng-newsletter.com/posts/serious-angular-seo.html
+- Google AJAX Application Guide: https://developers.google.com/webmasters/ajax-crawling/
  
 
