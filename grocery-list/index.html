@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" ng-app> <!-- ng-app Tells Angular to initialize on this page -->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Grocery List</title>
+
+    <!-- Bootstrap CSS Library -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	
+	<style>
+		/* The .done style will add a line-through and italic look to our items */
+		.done{
+			text-decoration: line-through;
+			font-style: italic;
+		}
+		
+		/* Removing bullet points from our list items */
+		ul{
+			list-style:none;
+		}
+		
+	</style>
+	
+	
+  </head>
+  <body>
+  
+	<!-- ng-controller tells angular our GroceryController is used in this DIV -->
+	<div class="container" ng-controller="GroceryController">
+		<!-- call the remaining() function to get the number of items not purchased -->
+		<h1>Grocery List {{remaining()}}</h1>
+		<form ng-submit="addItem()"> <!-- When the form is submitted, call addItem() -->
+			<input ng-model="item" autofocus type="text" class="form-control" placeholder="i.e. Eggs">
+			<button ng-disabled="item.length==0" type="submit" class="btn btn-primary">Add</button>
+			<button ng-disabled="checkList()" ng-click="archive()" type="button" class="btn btn-danger">Remove</button>
+		</form>
+		<ul>
+			<!-- ng-repeat goes through every item in our list variable
+					and makes a <li> with that item's data -->
+			<li ng-repeat="item in list track by $index">
+				<!-- The checkbox toggles the item's purchased property (true/false) -->
+				<input type="checkbox" ng-model="item.purchased">
+				<!-- The item's name is put in this span -->
+				<span ng-class="{done: item.purchased}">{{item.name}}</span>	
+				<!-- This span is our remove button. On click, the item is removed -->
+				<span ng-click="removeMe($index)" class="glyphicon glyphicon-minus-sign text-danger"></span>
+			</li>
+		</ul>
+	
+		
+	</div>
+	
+	
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+	
+	<!-- Our Custom JavaScript -->
+	<script>
+		//The GroceryController is a function that controls our application
+		//It's added to the container DIV in the html
+		function GroceryController($scope){
+			$scope.item = "";  //The text we are typing in the textfield
+			$scope.list = [];  //The list of items that get added
+			
+			//This function is called when the form is submitted and an item is added
+			$scope.addItem = function(){
+				
+				//Check to make sure the user has enter some text in the textfield
+				if($scope.item != ""){
+					var newItem = {name:$scope.item, purchased:false}; //make a new item with a name and purchased properties
+					$scope.list.push(newItem); //push that new item into our list
+					$scope.item = ""; //clear out the text field
+				}//End if
+			}//end addItem
+			
+			
+			//This function returns the total number of items in the list that haven't been purchased
+			$scope.remaining = function(){	
+				var count = 0; //This variable will be used to count our unpurchased items
+				angular.forEach($scope.list,function(item){ //Loop through our list
+					if(item.purchased == false){
+						count++; //if the item is not purchased, add to our counter
+					}
+				});
+				
+				//if our counter is more than zero, return the count, otherwise, don't return anything
+				if(count > 0){
+					return "(" + count + ")";
+				}
+				else{
+					return "";
+				}
+			
+			}//end remaining
+			
+			
+			//This function is called when the remove button is clicked
+			//This function removes any items that have been purchased
+			$scope.archive = function(){	
+				var oldList = $scope.list; //Save a copy of our current list
+				$scope.list = []; //Clear out all the items
+				angular.forEach(oldList,function(item){ //Loop through our old list
+					if(item.purchased == false){
+						$scope.list.push(item); //if an item hasn't yet been purchased, add it to the list
+					}
+				});			
+			}//end archive
+			
+			
+			//This function removes whatever item had been clicked
+			$scope.removeMe = function(index){
+				$scope.list.splice(index, 1);
+			}//end removeMe
+			
+			//This function is used to enable/disable the remove button
+			$scope.checkList = function(){	
+				var hideRemove = true;
+				angular.forEach($scope.list,function(item){
+					if(item.purchased == true){
+						hideRemove = false;
+					}
+				});
+				return hideRemove;
+			
+			}//end checkList
+			
+			
+		}//end GroceryController
+	</script>
+	
+	
+	
+	
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
