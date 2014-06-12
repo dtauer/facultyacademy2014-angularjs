@@ -16,6 +16,7 @@ https://event.crowdcompass.com/infotec/multi-level-list/ScheduleByTrack/1
 - XAMPP (windows) https://www.apachefriends.org/index.html
 - MAMP (mac) http://www.mamp.info/en/
 - Twitter Bootstrap: http://getbootstrap.com/
+- Online JSON Viewer: http://jsonviewer.stack.hu/
 
 ####Resources
 - Angular Project Site: https://angularjs.org/
