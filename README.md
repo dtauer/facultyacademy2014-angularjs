@@ -43,12 +43,6 @@ https://event.crowdcompass.com/infotec/multi-level-list/ScheduleByTrack/1
 - jsFiddle: http://jsfiddle.net/
 - Plunkr: http://plnkr.co/
 - GitBook (make books with GitHub): https://www.gitbook.io/
-
-
-
-
-
-
-
+- GitHub Pages (host websites on GitHub): https://pages.github.com/
 - 
 
