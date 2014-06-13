@@ -27,6 +27,7 @@ https://event.crowdcompass.com/infotec/multi-level-list/ScheduleByTrack/1
 - Angular & SEO: http://www.ng-newsletter.com/posts/serious-angular-seo.html
 - Google AJAX Application Guide: https://developers.google.com/webmasters/ajax-crawling/
 - Twitter Bootstrap Theme: http://getbootstrap.com/customize/
+- Subdomains with XAMPP: http://www.codingcereal.com/2011/05/setting-up-multiple-subdomains-in-your-localhost-using-xampp/
 
 ####Friday Tutorials
 - Free Angular Course: http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
