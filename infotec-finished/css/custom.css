@@ -1,0 +1,11 @@
+/* Custom CSS File */
+
+/*
+	Because we are using Bootstrap's fixed header,
+	we need to pad the top of the body tag so our content 
+	isn't under the header.
+*/
+
+body{
+	padding-top: 70px;
+}

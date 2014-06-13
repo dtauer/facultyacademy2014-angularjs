@@ -1,0 +1,18 @@
+<h3>{{sessions[0].track_name}} Sessions</h3>
+
+<form>
+	<input autofocus class="form-control" ng-model="searchText" type="search" placeholder="Search Title, Description.." >
+</form>
+<ul class="list-group">
+
+	<!--
+		We want to display all the session in the selected Track.  The
+		ng-repeat is looping through the sessions array.  For every session, 
+		we are adding a <session-detail> tag.  This is a custom tag (Angular
+		calls these "directives").  You can find the code for this tag in 
+		partials/session-detail-partial.html
+	-->
+  <session-detail ng-repeat="item in sessions | filter:searchText"></session-detail>
+
+ 
+</ul>
