@@ -26,5 +26,28 @@ https://event.crowdcompass.com/infotec/multi-level-list/ScheduleByTrack/1
 - Massive list of addtional resources: https://github.com/jmcunningham/AngularJS-Learning
 - Angular & SEO: http://www.ng-newsletter.com/posts/serious-angular-seo.html
 - Google AJAX Application Guide: https://developers.google.com/webmasters/ajax-crawling/
- 
+- Twitter Bootstrap Theme: http://getbootstrap.com/customize/
+
+####Friday Tutorials
+- Free Angular Course: http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
+- Code Avengers JavaScript Intro: http://www.codeavengers.com/javascript/17#1.1
+- Code Cademy jQuery Intro: http://www.codecademy.com/tracks/jquery
+- Basic jQuery Tutorial from W3Schools: http://www.w3schools.com/jquery/jquery_intro.asp
+- Building a Responsive Website: http://www.lingulo.com/tutorials/css/how-to-build-a-html5-website-from-scratch
+
+
+
+####Teaching Tools
+- CodePen: http://codepen.io/
+- jsFiddle: http://jsfiddle.net/
+- Plunkr: http://plnkr.co/
+- GitBook (make books with GitHub): https://www.gitbook.io/
+
+
+
+
+
+
+
+- 
 
